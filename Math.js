@@ -5,9 +5,11 @@ console.log(num1 + num2);
 
 console.log(2+2); 
 console.log(2-5);
-console.log(8/2);
-console.log(2*60);
-console.log(8%2)
+console.log(8/2);       // Division
+console.log(2*60);  
+console.log(8%2)        // Modolus
+
+console.log(11%2);
 
 var num1 = 20;
 var num2 = 30.56;

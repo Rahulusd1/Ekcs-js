@@ -16,7 +16,7 @@ alert(value);
 // Taking input from user using prompt
 var input = prompt("Please enter a value");
 
-console.log(input)
+// console.log(input)
 
 
 
