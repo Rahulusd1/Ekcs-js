@@ -11,7 +11,7 @@
 
 
 var user = prompt("Please enter your Name"); //Here I am facing case senstivity prob
-if(user[0] == "A"){
+if(user[0] == "A"){ 
     alert("First letter of your name is A");
 }else{
     alert("First letter of your name is not A")
