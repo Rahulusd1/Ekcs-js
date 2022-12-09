@@ -1,4 +1,4 @@
-var age = 18;
+ var age = 18;
 
 if(age < 18){
     alert("You are not eligible for the Liscence")
