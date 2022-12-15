@@ -50,6 +50,33 @@ There are three types of loops in js
 
 // Practice of Loops
 
-var name = 'Anoop Kumar';
+// var name = 'Anoop Kumar';
+
+// for(var i = 0; i < name.length; i++){
+//     console.log(name[i])
+// }
 
 
+// console.log(name.split(" "))
+
+
+// Replication of split function
+
+var name = "Anoop Kumar Sudir Kumar"
+
+var answer =  [];
+
+var string = ""
+
+for(var i = 0; i < name.length; i++){
+    if(name[i] !== " "){
+        string += name[i];
+    }else{
+        answer.push(string);
+        string = ""
+    }
+}
+
+answer.push(string)
+
+console.log(answer);
