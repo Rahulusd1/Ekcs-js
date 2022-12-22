@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <h1>Your Name Is : <span class="name-display"></span></h1>
+        <h1>Your Email Is : <span class="email-display"></span></h1>
+        <input type="text" id="name">
+        <input type="email" id="email">
+        <input type="button" value="Submit" id="submit">
+    </form>
+
+    <script>
+      var btn = document.getElementById("submit");
+      var dispName = document.querySelector(".name-display");
+      var dispEmail = document.querySelector(".email-display");
+      
+
+        
+      btn.addEventListener("click", function(){
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+
+        dispName.innerHTML = name.value;
+        dispEmail.innerHTML = email.value
+        
+      });
+      
+    </script>
+</body>
+</html>
