@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .bgColor{
+            background-color: cornflowerblue;
+            width: 500px;
+            padding: 1px 15px 15px 15px;
+        }
+      .gapHeight {
+        padding: 15px;
+        /* background-color: aqua; */
+      }
+      #submit {
+        background-color: #4f5350; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+   formula = weight / (height * height);
+   1. Create the bmi calculator
+   2. https://www.britannica.com/science/body-mass-index
+   -->
+    <form>
+        <div class="bgColor">
+      <h1>Your BMI : <span class="val-display"></span></h1>
+      <h1>Your Categary : <span class="cat-display"></span></h1>
+      <div class="gapHeight">
+        Your Height : <input type="number1" id="height" />
+      </div>
+      <div class="gapHeight">
+        Your Weight : <input type="number2" id="weight" />
+      </div>
+      <input type="button" value="Submit" id="submit" />
+    </div>
+    </form>
+
+    <script>
+      var btn = document.getElementById("submit");
+      var dispHeight = document.querySelector(".val-display");
+      var dispCat = document.querySelector(".cat-display");
+
+      btn.addEventListener("click", function () {
+        var height = document.getElementById("height");
+        var weight = document.getElementById("weight");
+        function bmi(height, weight) {
+          return weight / height ** 2;
+        }
+        var bmi = bmi(height.value, weight.value);
+        dispHeight.innerHTML = bmi;
+        if (bmi <= 18) {
+          // console.log("Underweight")
+          dispCat.innerHTML = "Underweight";
+        } else if (bmi >= 19 && bmi <= 24) {
+          dispCat.innerHTML = "Normal weight";
+        } else if (bmi >= 25 && bmi <= 29) {
+          dispCat.innerHTML = "Overweight";
+        } else if (bmi >= 30) {
+          dispCat.innerHTML = "Obesity";
+        }
+      });
+    </script>
+  </body>
+</html>
