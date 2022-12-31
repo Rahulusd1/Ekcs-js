@@ -1,7 +1,11 @@
 var text = document.getElementById("text"); // textarea
 
-function takeValue(){
-    return text.value
+// function takeValue(){
+//     return text.value
+// }
+
+const takeValue = () => {
+    return text.value;
 }
 
 function allCap(){
