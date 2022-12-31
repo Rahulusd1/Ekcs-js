@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <h1>Weight : <span class="name-display"></span></h1>
+        <h1>Height : <span class="email-display"></span></h1>
+        <h1>Result : <span class="result"></span></h1>
+        <input type="number" id="weight" value="weight">
+        <input type="number" id="height" value="Height">
+        <input type="button" value="Submit" id="submit">
+    </form>
+
+    <script>
+      var btn = document.getElementById("submit");
+      var dispName = document.querySelector(".name-display");
+      var dispEmail = document.querySelector(".email-display");
+      var dispresult = document.querySelector(".result");
+      var bmi= 0;
+
+
+
+
+        
+      btn.addEventListener("click", function(){
+        // var name = document.getElementById("name");
+        // var email = document.getElementById("email");
+bmi= parseInt(weight.value) / (parseInt(height.value) * parseInt(height.value));
+        dispName.innerHTML = height.value;
+        dispEmail.innerHTML = weight.value;
+        dispresult.innerHTML = bmi;
+        alert(bmi);
+      });
+      
+    </script>
+</body>
+</html>
