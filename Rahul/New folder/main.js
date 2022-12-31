@@ -1,18 +1,27 @@
 
 
 
-function lowercase(){
+function allCap(){
+    var text = document.getElementById("text"); // textarea
+    
+    var inputValue = text.value; // textarea.value
 
-    var text=document.getElementById("text");
-    var value = text.value;
-    var lowercase = value.toLowerCase();
-    text.value = lowercase;
+    var upper = inputValue.toUpperCase(); // UPPER CASE
 
+    text.value = upper // UPPER CASE
+}
+
+function allLow(){
+    var text = document.getElementById("text");
+
+    var inputValue = text.value;
+
+    var lower = inputValue.toLowerCase();
+
+    text.value = lower;
 }
 
 function copy(){
-
-    var text=document.getElementById("text").value;
+    var text = document.getElementById("text").value
     navigator.clipboard.writeText(text)
-
 }
