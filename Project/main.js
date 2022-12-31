@@ -1,39 +1,51 @@
+var text = document.getElementById("text"); // textarea
+
+function takeValue(){
+    return text.value
+}
+
 function allCap(){
-    var text = document.getElementById("text"); // textarea
-    
-    var inputValue = text.value; // textarea.value
-
-    var upper = inputValue.toUpperCase(); // UPPER CASE
-
-    text.value = upper // UPPER CASE
+    text.value = takeValue().toUpperCase(); // UPPER CASE
 }
 
 function allLow(){
-    var text = document.getElementById("text");
-
-    var inputValue = text.value;
-
-    var lower = inputValue.toLowerCase();
-
-    text.value = lower;
+    text.value = takeValue().toLowerCase();
 }
 
 function copy(){
-    var text = document.getElementById("text").value
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(takeValue())
 }
 
-function firstChar(){
-    var text = document.getElementById("text")
-    var inputValue = text.value
-    var space = inputValue.split(" "); // ["abc", "bc3"]
+function firstChar(){   
+    var space = takeValue().split(" "); // ["abc", "bc3"]
     var newArr = [];
+
     for(var i = 0; i < space.length; i++){
         var value = space[i];
-        var sum = value.charAt(0).toUpperCase() + value.slice(1)
+        var sum = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
         newArr.push(sum)
     }
     var finalValue = newArr.join("  ");
     console.log(finalValue);
     text.value = finalValue;
+}
+
+// Alternate
+// function firstChar(){   
+//     var space = takeValue().split(" "); // ["abc", "bc3"]
+//     var newArr = [];
+
+//     for(var i = 0; i < space.length; i++){
+//         newArr.push(space[i].charAt(0).toUpperCase() + space[i].slice(1))
+//     }
+
+//     text.value = newArr.join("  ");
+// }
+
+function count(){
+    var count = takeValue().length;
+    var word= takeValue().split(" "); // ["abc", "sdfsf"]
+    
+    document.getElementById("count").innerHTML = count;
+    document.getElementById("wordCount").innerHTML = word.length;
 }
